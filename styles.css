@@ -11,7 +11,7 @@ header, footer, main {
 }
 
 footer, header {
-    background-color: rgb(19, 106, 77);
+    background-color: rgb(66, 113, 98);
 }
 
 main {
@@ -51,4 +51,29 @@ main {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+}
+
+header {
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+}
+
+header img {
+    object-fit: contain;
+    width: 90vw;
+    
+}
+
+header #image-wrapper p {
+    transform: translateY(-50px);
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    color: gold;
+}
+
+#about-wrapper {
+    margin-top: -25px;
 }
