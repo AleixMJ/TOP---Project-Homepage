@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -34,21 +35,26 @@ footer {
     z-index: 10;
 }
 
-main {
+#projects-wrapper {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
 
 }
 
 .project-card {
-
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;  
+    background-color: #ffffff;
     
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
+h2 {
+    font-size: 2em;
 }
 
 .project-card img {
@@ -71,13 +77,13 @@ svg {
 .project-name {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
 }
 
-header {
-    display: flex;    
-    align-items: center;
-    flex-direction: column;
+.project-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 8px;
 }
 
 header img {
@@ -96,26 +102,87 @@ header #image-wrapper p {
     color: gold;
 }
 
-#about-wrapper {
+#about-wrapper p {
     margin-top: -25px;
     text-align: justify;
-}
-
-#about-wrapper p {
+    margin: 0 5px;
+    font-size: 2em;
     padding: 10px 0;
 }
+
+
+.project-card p {
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
 #main-links, .project-links, #footer-links {
     display: flex;
-    justify-content: flex-end; /* Keeps them aligned to the right side */
+    justify-content: flex-end;
     gap: 12px;
-    align-items: center;                 /* Adds nice clean space between the two icons */
+    align-items: center;
 }
 
 #footer-text-wrapper {
     text-align: justify;
+    font-size: 1.5em;
 }
 
 #footer-text-wrapper p {
     padding: 7px 0;
+
+}
+
+@media (min-width: 768px) {
+    #projects-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+header {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: row;
+        gap: 60px;
+        padding: 60px 40px;
+    }
+
+    header img {
+        object-fit: contain;
+        width: 100%;
+        min-width: 350px;
+        max-width: 30vw;
+        border-radius: 20px;
+    }
+
+    #about-wrapper {
+        background-color: white;
+        width: 100%;
+        max-width: 500px;
+        color: black;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); 
+    }
+
+    header #image-wrapper p {
+        font-size: 2.5em;
+        transform: translateY(-80px);
+    }
+
+    svg {
+    width: 36px;
+    max-height: 36px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #projects-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    svg {
+    width: 42px;
+    max-height: 42px;
+    }
 
 }
