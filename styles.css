@@ -11,7 +11,12 @@ header, footer, main {
 }
 
 footer, header {
-    background-color: rgb(66, 113, 98);
+    /* Changed base from #0b1528 to a lighter, more vibrant slate-blue (#1e293b) */
+    background-color: #1e293b; 
+    background-image: 
+        radial-gradient(at 0% 0%, #2563eb 0px, transparent 55%),   /* Brighter Royal Blue */
+        radial-gradient(at 100% 100%, #0d9488 0px, transparent 55%); /* Brighter Teal */
+    color: #f8fafc;
 }
 
 main {
@@ -38,9 +43,10 @@ main {
     
 }
 
-.project-card svg {
+svg {
     width: 28px;
-    height: 28px;
+    height: auto;
+    max-height: 28px;
 }
 
 .project-card p {
@@ -62,6 +68,7 @@ header {
 header img {
     object-fit: contain;
     width: 90vw;
+    border-radius: 20px;
     
 }
 
@@ -76,4 +83,16 @@ header #image-wrapper p {
 
 #about-wrapper {
     margin-top: -25px;
+    text-align: justify;
 }
+
+#about-wrapper p {
+    padding: 10px 0;
+}
+#main-links, .project-links {
+    display: flex;
+    justify-content: flex-end; /* Keeps them aligned to the right side */
+    gap: 12px;
+    align-items: center;                 /* Adds nice clean space between the two icons */
+}
+
