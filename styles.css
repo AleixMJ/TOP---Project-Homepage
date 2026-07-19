@@ -89,10 +89,18 @@ header #image-wrapper p {
 #about-wrapper p {
     padding: 10px 0;
 }
-#main-links, .project-links {
+#main-links, .project-links, #footer-links {
     display: flex;
     justify-content: flex-end; /* Keeps them aligned to the right side */
     gap: 12px;
     align-items: center;                 /* Adds nice clean space between the two icons */
 }
 
+#footer-text-wrapper {
+    text-align: justify;
+}
+
+#footer-text-wrapper p {
+    padding: 7px 0;
+
+}
